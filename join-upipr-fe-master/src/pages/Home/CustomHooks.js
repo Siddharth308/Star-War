@@ -10,7 +10,7 @@ function useFetchData(link) {
     .then((response) => response.json())
     .then((data) => {
       setData(data.results)
-      console.log(data)
+      // console.log(data)
     })
       .catch((err) => setIsError(true))
       .finally(() => setIsLoading(false));

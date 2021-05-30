@@ -47,8 +47,8 @@
     line-height: 30px;
   }
   .card__button{
-      margin-left: 40%;
-      text-align: center;
+      margin-left: 30%;
+      /* text-align: center; */
   }
   .card__button button{
     /* width: 100px;

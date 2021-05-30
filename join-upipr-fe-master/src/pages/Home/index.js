@@ -10,6 +10,7 @@ function HomePage() {
   const [id, setId] = React.useState("");
   const { debounceQuery } = useDebounce(query, 2000);
 
+  // Start calling the API after 2 seconds from user stopped typing
   const { data, isLoading, isError } = useFetchData(
     `https://swapi.dev/api/people/?search=${debounceQuery || "masai"} `
   );
@@ -33,10 +34,10 @@ function HomePage() {
           placeholder="Search by name"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          list="cars"
+          list="stars"
         />
 
-        <datalist id="cars">
+        <datalist id="stars">
           {data?.map((i) => (
             <option style={{ color: "white" }}>{i.name}</option>
           ))}
